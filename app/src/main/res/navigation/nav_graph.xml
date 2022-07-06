@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.task.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.task.ui.fragment.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.task.ui.fragment.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
